@@ -1,6 +1,6 @@
 kind: helm-release
 build:
-  context: .
+  context: ..
 install:
   chart: charts/webapplication120
   set:
@@ -16,7 +16,6 @@ install:
 configurations:
   develop:
     build:
-      context: ..
       dockerfile: Dockerfile.develop
       useGitIgnore: true
     container:
